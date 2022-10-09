@@ -2,9 +2,27 @@ import java.util.Scanner;
 
 public class Main { // déclaration de la classe principale
     public static void main(String[] args) {
-        somme();
-        volume();
-        nom(); // la fonction à éxucuter
+       Scanner s = new Scanner(System.in);
+       System.out.println("Quel exercice voulez-vous tester ?");
+       System.out.println("[1] Somme de 2 entiers");
+       System.out.println("[2] Division de 2 entiers");
+       System.out.println("[3] Volume d'un pavé droit");
+       System.out.println("[4] Affichage du nom de l'utilisateur");
+       int exo = s.nextInt(); // le numéro de l'exercice à éxecuter
+       switch (exo){
+           case 1:
+               somme();
+               break;
+           case 2:
+               division();
+               break;
+           case 3:
+               volume();
+               break;
+           case 4:
+               nom();
+               break;
+       }
     }
 
 // ------------------------------------- SOMME DE DEUX ENTIERS ---------------------------------------------------------
